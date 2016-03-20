@@ -35,5 +35,8 @@
     "starter-kit",
     "workflow",
     "webpack"
-  ]
+  ],
+  "dependencies": {
+    "extract-text-webpack-plugin": "^1.0.1"
+  }
 }
