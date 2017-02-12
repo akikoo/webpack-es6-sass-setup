@@ -7,7 +7,8 @@ This is a basic setup that only includes two main app files for demo purposes: `
 There's nothing in this setup that hasn't been done earlier by other people (see credits section for more advanced configuration).
 This project might be useful when quick (local) development setup is needed, to play with new stuff.
 
-For sample jspm and SystemJS project setup, you might want to take a look at https://github.com/akikoo/systemjs-jspm-setup.
+For sample jspm and SystemJS project setup, you might want to take a look at https://github.com/akikoo/systemjs-jspm-sass-setup.
+There's also a sample Universal React setup (both in the browser and in node) with jspm and SystemJS: https://github.com/akikoo/universal-react-systemjs-jspm.
 
 ## Environment setup 
 
