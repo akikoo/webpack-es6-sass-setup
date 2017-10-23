@@ -2,7 +2,6 @@
 
 var path = require('path');
 var webpack = require('webpack');
-var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var styleLintPlugin = require('stylelint-webpack-plugin');
 
@@ -32,27 +31,27 @@ module.exports = {
   ],
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: [
+          'babel-loader'
+        ]
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader!postcss!sass-loader?outputStyle=expanded'
-        )
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            'css-loader',
+            'postcss-loader',
+            'sass-loader'
+          ]
+        })
       }
     ]
   },
-
-  postcss: [
-    autoprefixer({
-      browsers: ['last 2 versions']
-    })
-  ],
 
   stats: {
     // Colored output
